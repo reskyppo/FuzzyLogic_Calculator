@@ -72,50 +72,248 @@ export class Home extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container px-2 mx-auto ">
+        <form>
+          <div className="flex flex-row md:flex-col">
+            <div className="md:flex md:items-center mb-6 mx-2">
+              <div className="md:w-1/3">
+                <label
+                  className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+                  htmlFor="inline-x1"
+                >
+                  x1
+                </label>
+              </div>
+              <div className="md:w-1/3">
+                <input
+                  className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                  id="inline-x1"
+                  type="number"
+                  onChange={this.handleChange}
+                  name="x1"
+                />
+              </div>
+            </div>
 
-      
-        x1 : <input type="number" name="x1" onChange={this.handleChange} />
-        <br />
-        x2 : <input type="number" name="x2" onChange={this.handleChange} />
-        <br />
-        x3: <input type="number" name="x3" onChange={this.handleChange} />
-        <br />
-        y1 : <input type="number" name="y1" onChange={this.handleChange} />
-        <br />
-        y2 : <input type="number" name="y2" onChange={this.handleChange} />
-        <br />
-        y3: <input type="number" name="y3" onChange={this.handleChange} />
-        <br />
-        z1: <input type="number" name="z1" onChange={this.handleChange} />
-        <br />
-        z2: <input type="number" name="z2" onChange={this.handleChange} />
-        <br />
-        <button onClick={this.handleSubmit}>submit</button>
-        <p>x1 {this.state.x1 > 0 ? this.state.x1 : ""}</p>
-        <p>x2 {this.state.x2 > 0 ? this.state.x2 : ""}</p>
-        <p>x3 {this.state.x3 > 0 ? this.state.x3 : ""}</p>
-        <p>y1 {this.state.y1 > 0 ? this.state.y1 : ""}</p>
-        <p>y2 {this.state.y2 > 0 ? this.state.y2 : ""}</p>
-        <p>y3 {this.state.y3 > 0 ? this.state.y3 : ""}</p>
-        <p>z1 {this.state.z1 > 0 ? this.state.z1 : ""}</p>
-        <p>z2 {this.state.z2 > 0 ? this.state.z2 : ""}</p>
-        <p>sum1 {this.state.sum1 > 0 ? this.state.sum1 : ""}</p>
-        <p>sum2 {this.state.sum2 > 0 ? this.state.sum2 : ""}</p>
-        <p>sum3 {this.state.sum3 > 0 ? this.state.sum3 : ""}</p>
-        <p>sum4{this.state.sum4 > 0 ? this.state.sum4 : ""}</p>
-        {this.state.clicked ? (
-          <Count
-            sum1={this.state.sum1}
-            sum2={this.state.sum2}
-            sum3={this.state.sum3}
-            sum4={this.state.sum4}
-            z1={this.state.z1}
-            z2={this.state.z2}
-          />
-        ) : (
-          ""
-        )}
+            <div className=" md:flex md:items-center mb-6 mx-2">
+              <div className="md:w-1/3">
+                <label
+                  className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+                  htmlFor="inline-x2"
+                >
+                  x2
+                </label>
+              </div>
+              <div className="md:w-1/3">
+                <input
+                  className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                  id="inline-x2"
+                  type="number"
+                  onChange={this.handleChange}
+                  name="x2"
+                />
+              </div>
+            </div>
+
+            <div className=" md:flex md:items-center mb-6 mx-2">
+              <div className="md:w-1/3">
+                <label
+                  className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+                  htmlFor="inline-x3"
+                >
+                  x3
+                </label>
+              </div>
+              <div className="md:w-1/3">
+                <input
+                  className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                  id="inline-x3"
+                  type="number"
+                  onChange={this.handleChange}
+                  name="x3"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-row md:flex-col">
+            <div className="md:flex md:items-center mb-6 mx-2">
+              <div className="md:w-1/3">
+                <label
+                  className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+                  htmlFor="inline-y1"
+                >
+                  y1
+                </label>
+              </div>
+              <div className="md:w-1/3">
+                <input
+                  className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                  id="inline-y1"
+                  type="number"
+                  onChange={this.handleChange}
+                  name="y1"
+                />
+              </div>
+            </div>
+
+            <div className=" md:flex md:items-center mb-6 mx-2">
+              <div className="md:w-1/3">
+                <label
+                  className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+                  htmlFor="inline-y2"
+                >
+                  y2
+                </label>
+              </div>
+              <div className="md:w-1/3">
+                <input
+                  className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                  id="inline-y2"
+                  type="number"
+                  onChange={this.handleChange}
+                  name="y2"
+                />
+              </div>
+            </div>
+
+            <div className=" md:flex md:items-center mb-6 mx-2">
+              <div className="md:w-1/3">
+                <label
+                  className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+                  htmlFor="inline-y3"
+                >
+                  y3
+                </label>
+              </div>
+              <div className="md:w-1/3">
+                <input
+                  className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                  id="inline-y3"
+                  type="number"
+                  onChange={this.handleChange}
+                  name="y3"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-row md:flex-col">
+            <div className="md:flex md:items-center mb-6 mx-2">
+              <div className="md:w-1/3">
+                <label
+                  className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+                  htmlFor="inline-z1"
+                >
+                  z1
+                </label>
+              </div>
+              <div className="md:w-1/3">
+                <input
+                  className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                  id="inline-z1"
+                  type="number"
+                  onChange={this.handleChange}
+                  name="z1"
+                />
+              </div>
+            </div>
+
+            <div className=" md:flex md:items-center mb-6 mx-2">
+              <div className="md:w-1/3">
+                <label
+                  className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4 "
+                  htmlFor="inline-z2"
+                >
+                  z2
+                </label>
+              </div>
+              <div className="md:w-1/3">
+                <input
+                  className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                  id="inline-z2"
+                  type="number"
+                  onChange={this.handleChange}
+                  name="z2"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="md:flex md:items-center mx-2">
+            <div className="md:w-1/3"></div>
+            <div className="md:w-2/3">
+              <button
+                className="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
+                type="button"
+                onClick={this.handleSubmit}
+              >
+                Submit
+              </button>
+            </div>
+          </div>
+        </form>
+        <div className="flex md:flex-row">
+          <div className="md:w-1/3"></div>
+          <div className=" w-full md:w-1/3 my-4 px-2">
+            <h1 className="font-bold text-xl">Result.</h1>
+            <div className="py-2 flex flex-row">
+              <div className="w-1/3">
+                x1 : {this.state.x1 > 0 ? this.state.x1 : ""}
+              </div>
+              <div className="w-1/3">
+                x2 : {this.state.x2 > 0 ? this.state.x2 : ""}
+              </div>
+              <div className="w-1/3">
+                x3 : {this.state.x3 > 0 ? this.state.x3 : ""}
+              </div>
+            </div>
+            <div className="py-2 flex flex-row">
+              <div className="w-1/3">
+                y1 : {this.state.y1 > 0 ? this.state.y1 : ""}
+              </div>
+              <div className="w-1/3">
+                y2 : {this.state.y2 > 0 ? this.state.y2 : ""}
+              </div>
+              <div className="w-1/3">
+                y3 : {this.state.y3 > 0 ? this.state.y3 : ""}
+              </div>
+            </div>
+            <div className="py-2 flex flex-row">
+              <div className="w-1/3">
+                z1 : {this.state.z1 > 0 ? this.state.z1 : ""}
+              </div>
+              <div className="w-1/3">
+                z2 : {this.state.z2 > 0 ? this.state.z2 : ""}
+              </div>
+            </div>
+            <div className="py-2 flex flex-row">
+              <div className="w-1/4 pr-2">
+                μ1 : {this.state.sum1 > 0 ? this.state.sum1 : ""}
+              </div>
+              <div className="w-1/4 pr-2">
+                μ2 : {this.state.sum2 > 0 ? this.state.sum2 : ""}
+              </div>
+              <div className="w-1/4 pr-2">
+                μ3 : {this.state.sum3 > 0 ? this.state.sum3 : ""}
+              </div>
+              <div className="w-1/4 pr-2">
+                μ4 : {this.state.sum4 > 0 ? this.state.sum4 : ""}
+              </div>
+            </div>
+            {this.state.clicked ? (
+              <Count
+                sum1={this.state.sum1}
+                sum2={this.state.sum2}
+                sum3={this.state.sum3}
+                sum4={this.state.sum4}
+                z1={this.state.z1}
+                z2={this.state.z2}
+              />
+            ) : (
+              ""
+            )}
+          </div>
+        </div>
       </div>
     );
   }

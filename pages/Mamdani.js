@@ -24,10 +24,19 @@ const Mamdani = ({ a1, a2, max, min, z1, z2 }) => {
   const z3 = Msum / Asum;
   return (
     <div>
-      <div>
-        a1 :{a1} a2 : {a2} m1 : {M1} m2 : {M2} m3 : {M3} <br />
-        A1 : {A1} A2 : {A2} A3 : {A3}
-        Zakhir = {Math.ceil(z3)}
+      <h1 className="font-bold text-xl">Mamdani.</h1>
+
+      <div className="py-2 flex flex-row">
+        <div className="w-1/2 pr-2">a1 :{a1} </div>
+        <div className="w-1/2 pr-2">a2 : {a2} </div>
+      </div>
+      <div className="py-2 flex flex-col">
+        <div className="pr-2">M1 : {M1} </div>
+        <div className="pr-2">M2 : {M2} </div>
+        <div className="pr-2">M3 : {M3} </div>
+      </div>
+      <div className="pr-2">
+        Z <sub>result</sub> = {Math.ceil(z3)}
       </div>
     </div>
   );
