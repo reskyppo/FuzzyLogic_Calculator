@@ -12,7 +12,10 @@ export default function index() {
       <footer>
         <p className="text-xs text-center">
           Made with <span className="text-pastel-pink-500">&hearts; </span> by
-          <a className="font-semibold" href="https://reskyppo.vercel.app/"> Reskyppo!</a>
+          <a className="font-semibold" href="https://reskyppo.vercel.app/">
+            {" "}
+            Reskyppo!
+          </a>
         </p>
       </footer>
     </>

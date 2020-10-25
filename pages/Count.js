@@ -1,4 +1,5 @@
 import Mamdani from "./Mamdani";
+import Tsukamoto from "./Tsukamoto";
 const Count = ({ sum1, sum2, sum3, sum4, z1, z2 }) => {
   const rule1 = Math.min(sum1, sum4);
   const rule2 = Math.min(sum1, sum3);
@@ -45,6 +46,16 @@ const Count = ({ sum1, sum2, sum3, sum4, z1, z2 }) => {
           />
         </div>
       )}
+      <div className="py-2">
+        <Tsukamoto
+          z1={Z1}
+          z2={Z2}
+          rule1={rule1}
+          rule2={rule2}
+          rule3={rule3}
+          rule4={rule4}
+        />
+      </div>
     </div>
   );
 };

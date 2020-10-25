@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Input from "../components/Input";
 import Count from "./Count";
 
 export class Home extends Component {
@@ -74,171 +75,15 @@ export class Home extends Component {
     return (
       <div className="container px-2 mx-auto ">
         <form>
-          <div className="flex flex-row md:flex-col">
-            <div className="md:flex md:items-center mb-6 mx-2">
-              <div className="md:w-1/3">
-                <label
-                  className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
-                  htmlFor="inline-x1"
-                >
-                  x1
-                </label>
-              </div>
-              <div className="md:w-1/3">
-                <input
-                  className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
-                  id="inline-x1"
-                  type="number"
-                  onChange={this.handleChange}
-                  name="x1"
-                />
-              </div>
-            </div>
+          <Input name="x1" onChange={this.handleChange} />
+          <Input name="x2" onChange={this.handleChange} />
+          <Input name="x3" onChange={this.handleChange} />
+          <Input name="y1" onChange={this.handleChange} />
+          <Input name="y2" onChange={this.handleChange} />
+          <Input name="y3" onChange={this.handleChange} />
+          <Input name="z1" onChange={this.handleChange} />
+          <Input name="z2" onChange={this.handleChange} />
 
-            <div className=" md:flex md:items-center mb-6 mx-2">
-              <div className="md:w-1/3">
-                <label
-                  className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
-                  htmlFor="inline-x2"
-                >
-                  x2
-                </label>
-              </div>
-              <div className="md:w-1/3">
-                <input
-                  className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
-                  id="inline-x2"
-                  type="number"
-                  onChange={this.handleChange}
-                  name="x2"
-                />
-              </div>
-            </div>
-
-            <div className=" md:flex md:items-center mb-6 mx-2">
-              <div className="md:w-1/3">
-                <label
-                  className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
-                  htmlFor="inline-x3"
-                >
-                  x3
-                </label>
-              </div>
-              <div className="md:w-1/3">
-                <input
-                  className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
-                  id="inline-x3"
-                  type="number"
-                  onChange={this.handleChange}
-                  name="x3"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className="flex flex-row md:flex-col">
-            <div className="md:flex md:items-center mb-6 mx-2">
-              <div className="md:w-1/3">
-                <label
-                  className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
-                  htmlFor="inline-y1"
-                >
-                  y1
-                </label>
-              </div>
-              <div className="md:w-1/3">
-                <input
-                  className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
-                  id="inline-y1"
-                  type="number"
-                  onChange={this.handleChange}
-                  name="y1"
-                />
-              </div>
-            </div>
-
-            <div className=" md:flex md:items-center mb-6 mx-2">
-              <div className="md:w-1/3">
-                <label
-                  className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
-                  htmlFor="inline-y2"
-                >
-                  y2
-                </label>
-              </div>
-              <div className="md:w-1/3">
-                <input
-                  className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
-                  id="inline-y2"
-                  type="number"
-                  onChange={this.handleChange}
-                  name="y2"
-                />
-              </div>
-            </div>
-
-            <div className=" md:flex md:items-center mb-6 mx-2">
-              <div className="md:w-1/3">
-                <label
-                  className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
-                  htmlFor="inline-y3"
-                >
-                  y3
-                </label>
-              </div>
-              <div className="md:w-1/3">
-                <input
-                  className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
-                  id="inline-y3"
-                  type="number"
-                  onChange={this.handleChange}
-                  name="y3"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className="flex flex-row md:flex-col">
-            <div className="md:flex md:items-center mb-6 mx-2">
-              <div className="md:w-1/3">
-                <label
-                  className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
-                  htmlFor="inline-z1"
-                >
-                  z1
-                </label>
-              </div>
-              <div className="md:w-1/3">
-                <input
-                  className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
-                  id="inline-z1"
-                  type="number"
-                  onChange={this.handleChange}
-                  name="z1"
-                />
-              </div>
-            </div>
-
-            <div className=" md:flex md:items-center mb-6 mx-2">
-              <div className="md:w-1/3">
-                <label
-                  className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4 "
-                  htmlFor="inline-z2"
-                >
-                  z2
-                </label>
-              </div>
-              <div className="md:w-1/3">
-                <input
-                  className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
-                  id="inline-z2"
-                  type="number"
-                  onChange={this.handleChange}
-                  name="z2"
-                />
-              </div>
-            </div>
-          </div>
           <div className="md:flex md:items-center mx-2">
             <div className="md:w-1/3"></div>
             <div className="md:w-2/3">
